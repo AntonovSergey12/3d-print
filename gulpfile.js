@@ -1,32 +1,95 @@
-const gulp = require('gulp');
-const terser = require('gulp-terser');
-const deleted = require('gulp-deleted');
+const {src, dest, series, watch} = require('gulp')
+const gulp = require('gulp')
+const deleted = require('gulp-deleted')
+const plumbert = require('gulp-plumber')
+const csso = require('gulp-csso')
+const sourcemaps = require('gulp-sourcemaps')
+const autoprefixer = require('gulp-autoprefixer')
+const sass = require('gulp-sass')(require('sass'))
+const rename = require('gulp-rename')
+const imagemin = require('gulp-imagemin')
+const svgstore = require('gulp-svgstore')
+const pipeline = require('readable-stream').pipeline
+const uglify = require('gulp-uglify-es').default
 
-const indexhtml = function() {
-    return gulp.src('./source/index.html').pipe(gulp.dest('./build/'));
-}
 
-const printhtml = function() {
-    return gulp.src('./source/3d-print.html').pipe(gulp.dest('./build/'));
-}
-
-const modelinghtml = function() {
-    return gulp.src('./source/3d-modeling.html').pipe(gulp.dest('./build/'));
-}
-
-const contactshtml = function() {
-    return gulp.src('./source/contacts.html').pipe(gulp.dest('./build/'));
-}
-
-const stylecss = function() {
-    return gulp.src('./source/style/style.css').pipe(gulp.dest('./build/style/'));
-}
-const js = function() {
-    return gulp.src('./source/js/script.js')
-    .pipe(terser())
-    .pipe(gulp.dest('./build/js/'))
+function copy() {
+    return src ([
+        'source/fonts/**/*',
+        'source/*.ico*'
+    ], {
+        base: 'source'
+    })
+    .pipe(dest('build'))
 }
 const clean = function() {
-    return gulp.src('./source').pipe(deleted({src: './source', dest: './build', patterns: ['**/*']})).pipe(gulp.dest('./build'));
+    return gulp.src('./source').pipe(deleted({src: './source', dest: './build', patterns:['**/*']})).pipe(gulp.dest('./build'))
 }
-exports.build = gulp.series(clean,indexhtml, printhtml, modelinghtml, contactshtml, stylecss, js);
+function html() {
+    return src('./source/*.html')
+    .pipe(dest('build'))
+}
+function css() {
+    return src('./source/sass/**/*.sass')
+    .pipe(plumbert())
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write("./"))
+    .pipe(dest('build/css'))
+}
+function cssNomin() {
+    return src('./source/sass/**/*.sass')
+    .pipe(plumbert())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(dest('build/css'))
+}
+function images() {
+    return src('./source/img/**/*.{png,jpg,jpeg}')
+	.pipe(imagemin([
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+	imagemin.optipng({optimizationLevel: 3})
+])).pipe(dest('build/img'))
+}
+function sprite() {
+    return src('./source/img/icon-*.svg')
+    .pipe(imagemin([imagemin.svgo()]))
+    .pipe(svgstore({
+        inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest('build/img'))
+}
+function js() {
+    return pipeline (
+        src('./source/js/*.js'),
+        sourcemaps.init(),
+        uglify(),
+        sourcemaps.write('.'),
+        rename({suffix: '.min'}),
+        dest('build/js')
+    
+    )
+}
+
+
+exports.html = html
+exports.css = css
+exports['css-nomin'] = cssNomin
+exports.images = images
+exports.sprite = sprite
+exports.js = js
+
+exports.build = series(
+    clean,
+    images,
+    copy,
+    html,
+    css,
+    cssNomin,
+    sprite,
+    js,
+)
+

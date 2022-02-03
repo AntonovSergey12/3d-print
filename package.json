@@ -17,11 +17,23 @@
     "url": "https://github.com/AntonovSergey12/3d-print/issues"
   },
   "homepage": "https://github.com/AntonovSergey12/3d-print#readme",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-deleted": "^1.0.0"
-  },
   "devDependencies": {
-    "gulp-terser": "^2.1.0"
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-deleted": "^1.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^3.0.0",
+    "readable-stream": "^3.6.0",
+    "sass": "^1.49.7"
   }
 }
