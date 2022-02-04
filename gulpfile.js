@@ -1,7 +1,7 @@
 const {src, dest, series, watch} = require('gulp')
 const gulp = require('gulp')
 const deleted = require('gulp-deleted')
-const plumbert = require('gulp-plumber')
+const plumber = require('gulp-plumber')
 const csso = require('gulp-csso')
 const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer')
@@ -31,17 +31,18 @@ function html() {
 }
 function css() {
     return src('./source/sass/**/*.sass')
-    .pipe(plumbert())
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
+    .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write("./"))
     .pipe(dest('build/css'))
 }
 function cssNomin() {
     return src('./source/sass/**/*.sass')
-    .pipe(plumbert())
+    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(dest('build/css'))
@@ -90,6 +91,6 @@ exports.build = series(
     css,
     cssNomin,
     sprite,
-    js,
+    js
 )
 
