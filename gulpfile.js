@@ -11,7 +11,8 @@ const imagemin = require('gulp-imagemin')
 const svgstore = require('gulp-svgstore')
 const pipeline = require('readable-stream').pipeline
 const uglify = require('gulp-uglify-es').default
-
+const server = require('browser-sync')
+const del = require('del')
 
 function copy() {
     return src ([
@@ -22,15 +23,16 @@ function copy() {
     })
     .pipe(dest('build'))
 }
-const clean = function() {
-    return gulp.src('./source').pipe(deleted({src: './source', dest: './build', patterns:['**/*']})).pipe(gulp.dest('./build'))
+function delet(done) {
+    del.sync(['./build/*/'])
+    done()
 }
 function html() {
     return src('./source/*.html')
-    .pipe(dest('build'))
+    .pipe(dest('./build/'))
 }
 function css() {
-    return src('./source/sass/**/*.sass')
+    return src('./source/scss/**/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -75,22 +77,38 @@ function js() {
     )
 }
 
-
+function serve() {
+    server.init({
+        server: 'build/',
+        notify: false,
+        open: true,
+        cors: true,
+        ui:false
+    })
+    watch('source/scss/**/*scss', series(css, cssNomin, refresh))
+    watch('source/*.html', series(html,refresh))
+}
+function refresh(done) {
+    server.reload()
+    done()
+}
 exports.html = html
 exports.css = css
 exports['css-nomin'] = cssNomin
 exports.images = images
 exports.sprite = sprite
 exports.js = js
+exports.delet = delet
 
 exports.build = series(
-    clean,
+    delet,
     images,
     copy,
     html,
     css,
     cssNomin,
     sprite,
-    js
+    js,
+    serve
 )
 
