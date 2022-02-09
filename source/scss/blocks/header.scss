@@ -3,16 +3,113 @@
     margin: 0;
     padding: 0;
 }
-* {
-    margin: 0;
-    padding: 0;
-}
 .header { 
     width: 100%;
+    background-image: url(../../img/main/background-color-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header__wrapper {
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.logo {
+    padding-top: 33px;
+    margin-right: 314px;
+}
+.menu__list {
+    @include list-reset;
+    display: flex;
+    padding-top: 39px;
+        &-items {
+            margin-right: 72px;
+            text-decoration: none;
+            color: #2C2F36;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            position: relative;
+    }
+        &-items:hover{
+            color:#FB8C00;
+        }
+}
+.menu__list-items-hover:hover::before {
+    position: absolute;
+    content: "";
+    width: 73px;
+    height: 3px;
+    background-color: #FB8C00;
+    border-radius: 18px;
+    top: 22px;
+}
+.menu__buttons {
+    padding-top: 24px;   
+}
+.menu__list-button {
+    background-color: #FB8C00;
+    border: none;
+    border-radius: 88px;
+    min-width: 256px;
+    min-height: 48px;
+    color: #fff;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    position: relative;
+        &:hover {
+            background: #2F80ED;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 13px;
+            background-image: url(../../img/main/calculate-button.svg);
+            top: 17px;
+            left: 22px;
+            background: #fff;
+        }
+}
+
+.section {
     display: grid;
     max-width: 1200px;
-    grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
+    padding-top: 109px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+        &__text-title {
+            font-weight: 800;
+            font-size: 72px;
+            line-height: 88px;
+            color: #2C2F36;
+            width: 350px;
+        }
+}
+.section__text-title-color {
+    color:#FB8C00;
+}
+.section_container {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 79px;
+}
+.paragraph {
+    display: flex;
+    justify-self: center;
+    align-items: end;
+        &__text {
+            margin-left: 60px;
+        }
+}
+.paragraph__text:first-child {
+    margin-left: 0;
+}
+.section-printer {
+    padding-left: 230px;
 }
