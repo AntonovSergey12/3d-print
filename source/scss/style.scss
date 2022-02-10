@@ -1,8 +1,3 @@
-@import url(./blocks/header.scss);
-@import url(fonts.scss);
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "gilroy", "Helvetica", sans-serif;
-    font-style: normal;
-}
+@import './blocks/header.scss';
+@import './blocks/top-section.scss';
+@import './fonts.scss';
