@@ -50,14 +50,14 @@ function cssNomin() {
     .pipe(dest('build/css'))
 }
 function images() {
-    return src('./source/img/**/*.{png,jpg,jpeg}')
+    return src('./source/img/**/*.{png,jpg,jpeg,svg}')
 	.pipe(imagemin([
     imagemin.mozjpeg({quality: 75, progressive: true}),
 	imagemin.optipng({optimizationLevel: 3})
 ])).pipe(dest('build/img'))
 }
 function sprite() {
-    return src('./source/img/icon-*.svg')
+    return src('./source/img/**/*.svg')
     .pipe(imagemin([imagemin.svgo()]))
     .pipe(svgstore({
         inlineSvg: true
