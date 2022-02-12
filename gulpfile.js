@@ -32,7 +32,7 @@ function html() {
     .pipe(dest('./build/'))
 }
 function css() {
-    return src('./source/scss/**/*.scss')
+    return src('./source/scss/style.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())

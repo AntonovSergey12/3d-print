@@ -1,4 +1,20 @@
+@import './fonts.scss';
+@import './global.scss';
+@import './mixin.scss';
+@import './variables.scss';
+@import './blocks/wrapper.scss';
 @import './blocks/header.scss';
-@import "./blocks/top-section.scss";
-@import "./blocks/section-details.scss";
-@import 'fonts.scss';
+@import './blocks/menu.scss';
+@import './blocks/top-section.scss';
+@import './blocks/top-section-title.scss';
+@import './blocks/paragraph-top.scss';
+@import './blocks/top-section-printer.scss';
+@import './blocks/section-details.scss';
+@import './blocks/details-title.scss';
+@import './blocks/details-element-items.scss';
+@import './blocks/details-element-items-img.scss';
+@import './blocks/condition-work.scss';
+@import './blocks/condition-work-container.scss';
+@import './blocks/condition-work-image-imployees.scss';
+@import './blocks/services.scss';
+

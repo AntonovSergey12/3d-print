@@ -8,7 +8,7 @@
     <title>3d-print</title>
 </head>
 <body>
-    <div class="background-fon-top">
+    <div class="wrapper">
         <header class="header">
             <div class="header__wrapper">
                 <div class="logo">
@@ -25,69 +25,89 @@
                     <button class="menu__list-button">Рассчитать стоимость</button>
                 </div>
             </div>
+            <div class="header__background-wrapper">
+                <img src="./img/main/background-color-header.jpg" alt="background-gradient" class="header__background-wrapper_img">
+            </div>
         </header>
-        <section class="section">
-            <div class="section__container">
-                <h1 class="section__text-title">Услуги <span class="section__text-title-color">3D</span>-печати</h1>
-                <div class="paragraph">
-                    <p class="paragraph__text" >Используем готовую модель или поможем с проектированием</p>
-                    <p class="paragraph__text" >Производим как единичные экземпляры, так и выпускаем тиражи</p>
-                    <p class="paragraph__text">Печатаем по технологии FDM и SLA</p>
+        <section class="top-section">
+            <div class="top-section__container">
+                <h1 class="top-section-title">Услуги <span class="top-section-title-color"><br>3D</span>-печати</h1>
+                <div class="paragraph-top">
+                    <p class="paragraph-top__text" >Используем готовую модель или поможем с проектированием</p>
+                    <p class="paragraph-top__text" >Производим как единичные экземпляры, так и выпускаем тиражи</p>
+                    <p class="paragraph-top__text">Печатаем по технологии FDM и SLA</p>
                 </div> 
             </div>
-            <div class="section-printer">
+            <div class="top-section-printer">
                 <img src="img/main/header-printer.jpg" alt="3D-printer" width="813px" height="501px" class="section-printer__image">
             </div>
         </section>
-    </div>
     <main class="main">
         <section class="details">
-            <h1 class="details__title">Изготовим что угодно</h1>
+            <h1 class="details-title">Изготовим что угодно</h1>
             <div class="details__elements">
                 <div class="element-items">
-                    <img src="img/main/detail-1.jpg" alt="wheel" class="element-items__image" width="200px" height="162px"></img>
-                    <h2 class="element-items__title">Промышленные прототипы</h2>
-                    <p class="element-items__text">Для испытания образцов перед началом производства</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-1.jpg" alt="wheel" class="element-items__image" width="200px" height="162px"></img>
+                    </div>
+                        <h2 class="element-items__title">Промышленные прототипы</h2>
+                        <p class="element-items__text">Для испытания образцов перед началом производства</p>
                 </div>
                 <div class="element-items">
-                    <img src="img/main/detail-2.png" alt="Tower" class="element-items__image" width="76px" height="210px"></img>
-                    <h2 class="element-items__title">Архитектурные макеты</h2>
-                    <p class="element-items__text">Для наглядной презентации ваших проектов</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-2.png" alt="Tower" class="element-items__image" width="76px" height="210px"></img>
+                    </div>
+                        <h2 class="element-items__title">Архитектурные макеты</h2>
+                        <p class="element-items__text">Для наглядной презентации ваших проектов</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-3.png" alt="ring" class="element-items__image" width="214px" height="184px"></img>
-                    <h2 class="element-items__title">Ювелирные изделия</h2>
-                    <p class="element-items__text">Для придания индивидуального стиля</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-3.png" alt="ring" class="element-items__image" width="214px" height="184px"></img>
+                    </div>
+                        <h2 class="element-items__title">Ювелирные изделия</h2>
+                        <p class="element-items__text">Для придания индивидуального стиля</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-4.png" alt="Sculptures" class="element-items__image" width="180px" height="178px"></img>
-                    <h2 class="element-items__title">Скульптуры</h2>
-                    <p class="element-items__text">Для творческой декорации интерьера</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-4.png" alt="Sculptures" class="element-items__image" width="180px" height="178px"></img>
+                    </div>
+                        <h2 class="element-items__title">Скульптуры</h2>
+                        <p class="element-items__text">Для творческой декорации интерьера</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-5.png" alt="engineering details" class="element-items__image" width="100px" height="161px"></img>
-                    <h2 class="element-items__title">Инженерные детали</h2>
-                    <p class="element-items__text">Для воплощения в жизнь смелых идей</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-5.png" alt="engineering details" class="element-items__image" width="100px" height="161px"></img>
+                    </div>
+                        <h2 class="element-items__title">Инженерные детали</h2>
+                        <p class="element-items__text">Для воплощения в жизнь смелых идей</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-6.png" alt="Presentation layouts" class="element-items__image" width="168px" height="188px"></img>
-                    <h2 class="element-items__title">Презентационные макеты</h2>
-                    <p class="element-items__text">Для демонстрации на выставках или на витринах</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-6.png" alt="Presentation layouts" class="element-items__image" width="168px" height="188px"></img>
+                    </div>
+                        <h2 class="element-items__title">Презентационные макеты</h2>
+                        <p class="element-items__text">Для демонстрации на выставках или на витринах</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-7.png" alt="medical models" class="element-items__image" width="175px" height="108px"></img>
-                    <h2 class="element-items__title">Медицинские и образовательные модели</h2>
-                    <p class="element-items__text">Для использования в качестве учебных пособий</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-7.png" alt="medical models" class="element-items__image element-items__teeth" width="175px" height="108px"></img>
+                    </div>
+                        <h2 class="element-items__title">Медицинские и образовательные модели</h2>
+                        <p class="element-items__text">Для использования в качестве учебных пособий</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-8.png" alt="auto parts" class="element-items__image" width="74px" height="162px"></img>
-                    <h2 class="element-items__title">Автозапчасти</h2>
-                    <p class="element-items__text element-items__text-width">Для замены редких или снятых с производства деталей</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-8.png" alt="auto parts" class="element-items__image" width="74px" height="162px"></img>
+                    </div>
+                        <h2 class="element-items__title">Автозапчасти</h2>
+                        <p class="element-items__text element-items__text-width">Для замены редких или снятых с производства деталей</p>
                 </div> 
                 <div class="element-items">
-                    <img src="img/main/detail-9.png" alt="Souvenir products" class="element-items__image" width="86px" height="164px"></img>
-                    <h2 class="element-items__title">Сувенирная продукция</h2>
-                    <p class="element-items__text">Для создания необычных и запоминающихся даров</p>
+                    <div class="element-items-img">
+                        <img src="img/main/detail-9.png" alt="Souvenir products" class="element-items__image" width="86px" height="164px"></img>
+                    </div>
+                        <h2 class="element-items__title">Сувенирная продукция</h2>
+                        <p class="element-items__text">Для создания необычных и запоминающихся даров</p>
                 </div>
             </div>
         </section>
@@ -98,20 +118,25 @@
                         <img src="img/main/people.png" alt="employees" class="image-employees__img" width="728px" height="626px">
                     </div>
                     <div class="services">
-                        <div class="services__info services-info-long">
-                            <p class="services__info-text">Составление заявки на просчёт стоимости и сроков</p>
+                        <div class="services__info services__info-text-first">
+                            <span class="services__info-number">01</span>
+                            <p class="services__info-text services__info-text__first">Составление заявки на просчёт стоимости и сроков</p>
                         </div>
-                        <div class="services__info">
-                            <p class="services__info-text">Предоплата работы</p>
+                        <div class="services__info services__info-text-second">
+                            <span class="services__info-number">02</span>
+                            <p class="services__info-text services__info-text__second">Предоплата работы</p>
                         </div>
-                        <div class="services__info">
-                            <p class="services__info-text">Создание и согласование 3D-модели</p>
+                        <div class="services__info services__info-text-third">
+                            <span class="services__info-number">03</span>
+                            <p class="services__info-text services__info-text__third">Создание и согласование 3D-модели</p>
                         </div>
-                        <div class="services__info">
-                            <p class="services__info-text">Предоплата работы</p>
+                        <div class="services__info services__info-text-fourth">
+                            <span class="services__info-number">04</span>
+                            <p class="services__info-text services__info-text__fourth">Предоплата работы</p>
                         </div>
-                        <div class="services__info">
-                            <p class="services__info-text">Отправка клиенту после оплаты остатка</p>
+                        <div class="services__info services__info-text-fifth">
+                            <span class="services__info-number">05</span>
+                            <p class="services__info-text services__info-text__fifth">Отправка клиенту после оплаты остатка</p>
                         </div>
                     </div>
                 </div>
@@ -216,5 +241,6 @@
             </div>
         </div>
     </footer>
+    </div>
 </body>
 </html>
