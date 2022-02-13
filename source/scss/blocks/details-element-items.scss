@@ -1,0 +1,31 @@
+.element-items {
+    min-height: 284px;
+    min-width: 370px;
+    background: radial-gradient(98.97% 276.64% at 1.03% 40.7%, #EBF6FF 0%, #EFF8FF 100%);
+    border-radius: 35px;
+}
+.element-items__title {
+    max-width: 215px;
+    padding-left: 78px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+}
+.element-items__text {
+    max-width: 228px;
+    padding-left: 71px;
+    padding-bottom: 40px;
+}
+.element-items:nth-child(7)>.element-items__title {
+    max-width: 230px;
+}
+
+.element-items:nth-child(8)>.element-items__text {
+    max-width: 262px;
+    padding-left: 54px;
+}
+.element-items:nth-child(6)>.element-items__title {
+    max-width: 259px;
+    padding-left: 56px;
+}

@@ -1,0 +1,15 @@
+.details {
+    padding-top: 307px;
+    max-width: 1200px;
+    margin: 0 auto;
+        &__elements {
+            padding-top: 129px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            align-items: end;
+            justify-items: center;
+            text-align: center;
+            gap: 126px 30px;
+        }
+}

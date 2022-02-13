@@ -1,0 +1,11 @@
+.section-printer__image {
+    position: relative;
+    top: -40px;
+}
+@media (min-width: 375px) and (max-width:765px) {
+    .section-printer__image {
+        max-width: 385px;
+        max-height: 236px;
+        object-fit: contain;
+    }
+}

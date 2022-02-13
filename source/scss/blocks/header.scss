@@ -1,32 +1,9 @@
-.background-fon-top::before {
-    position: absolute;
-    content: "";
-    width: 203px;
-    height: 203px;
-    background-image: url(../../img/circle-color.svg);
-    background-repeat: no-repeat;
-    top: 538px;
-}
-.header { 
+.header {
     width: 100%;
-}
-.header__wrapper {
-    display: flex;
-    max-width: 1200px;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-.logo {
-    padding-top: 33px;
-    margin-right: 314px;
-}
-.header__background-wrapper_img {
-    position: absolute;
-    top: 0;
-    left: 20%;
-    max-width: 1600px;
-    margin: 0 auto;
-    height: 940px;
-    object-fit: cover;
-    z-index: -3;
+        &__wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
 }

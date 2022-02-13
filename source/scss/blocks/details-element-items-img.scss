@@ -1,0 +1,13 @@
+.element-items-img {
+    height: 200px;
+}
+.element-items__image {
+    transform: translateY(-40px);
+}
+.element-items:nth-child(7)>.element-items-img {
+    height: 175px;
+    transform: translateY(40px);
+}
+.element-items:nth-child(1)>.element-items-img {
+    height: 175px;
+}
