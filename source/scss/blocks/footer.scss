@@ -1,0 +1,73 @@
+.footer {
+    width: 100%;
+    min-height: 415px;
+        &__wrapper{
+            background-image: url(../../img/main/background-footer.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 180px;
+            padding-left: 200px;
+            padding-right: 200px;
+            margin: 0 auto;
+            min-height: 250px;
+            max-width: 1600px;
+            display: grid;
+            align-self: center;
+            grid-template-columns: 0.5fr 1fr 3fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "footer-logo footer-menu footer__data" "footer-political footer-political footer-political";
+        }
+        &__address {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: $color-text;
+            padding-bottom: 12px;
+        }
+}
+.footer-logo {
+    grid-area: footer-logo;
+    padding-top: 10px;
+}
+.footer-menu {
+    grid-area: footer-menu;
+    align-self:center;
+}
+.footer__data {
+    grid-area: footer__data;
+    justify-self: end;
+    align-self:center;
+    display: flex;
+        &-telefon{
+            margin-right: 89px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: $color-text;
+        }
+        &-contact {
+            padding-top: 5px;
+            text-align: right;
+        }
+}
+.footer__social-media {
+    display: flex;
+    justify-content: end;
+        &-facebook,&-youtube {
+            margin-top: 18px;
+            margin-right: 24px;
+            background-color: #B4BBCE;
+            width: 44px;
+            height: 44px;
+            border-radius: 30px;
+            background-image: url(../../img/main/youtube.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        &-youtube {
+            background-image: url(../../img/main/facebook.svg);
+            margin-right: 0;
+        }
+}

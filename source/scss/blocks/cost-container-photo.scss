@@ -1,0 +1,32 @@
+.container-photo {
+    position: relative;
+    box-sizing: border-box;
+    width: 590px;
+    height: 109px;
+    margin-left: 40px;
+    border-radius: 7px;
+    padding-top: 40px;
+    border: dashed #B4BBCE; 
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    color: $color-text;
+    text-align: center;
+    cursor: pointer;
+        &__file-upload {
+            outline: 0;
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+        &__icon {
+            margin-right: 13px;
+        }
+}
+.container-photo:hover {
+    border: 3px dashed #FB8C00;
+}
+.custom-file-upload {
+    width: 590px;
+    height: 109px;
+}

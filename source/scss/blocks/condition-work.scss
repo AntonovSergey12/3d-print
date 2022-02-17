@@ -1,5 +1,10 @@
 .condition-work {
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 1430px;
     padding-top: 194px;
+}
+
+@media (min-width:1601px) {
+    .condition-work {
+        margin: 0 auto;
+    }
 }
