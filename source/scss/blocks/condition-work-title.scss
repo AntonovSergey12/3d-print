@@ -1,0 +1,13 @@
+.condition-work-title {
+    padding-left: 215px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+    color: $color-text;
+}
+
+@media (min-width:1601px) {
+    .condition-work-title {
+        padding-left: 120px;
+    }
+}

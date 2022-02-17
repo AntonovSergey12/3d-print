@@ -1,0 +1,34 @@
+.permission {
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: #959CAC;
+    &__format {
+        display: flex;
+        max-width: 590px;
+        padding-left: 40px;
+        padding-top: 16px;
+        justify-content: space-between;
+    }
+    &__file-size {
+        max-width: 324px;
+        padding-left: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.permission__format-text:nth-child(2) {
+    padding-left: 144px;
+    max-width: 298px;
+}
+.permission__file-size-text {
+    padding-top: 16px;
+}
+.permission__button {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+}

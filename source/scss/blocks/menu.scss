@@ -1,0 +1,39 @@
+.menu__list {
+    display: flex;
+    list-style: none;
+    padding-top: 39px;
+        &-items {
+            margin-left: 72px;
+            color: $color-text;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+        }
+}
+
+.menu__buttons {
+    margin-top: 24px;   
+}
+.menu__list-button {
+    min-width: 256px;
+    min-height: 48px;   
+    background-color: #FB8C00;
+    border-radius: 88px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    border: none;
+    position: relative;
+    padding-left: 14px;
+}
+.menu__list-button::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url(../../img/main/calculate-button.svg);
+    left: 25px;
+    top: 15px;
+}
+

@@ -1,0 +1,49 @@
+.reverse-form {
+    padding-top: 90px;
+    margin-left: 73px;
+    display: grid;
+    grid-template-columns: 250px 300px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 20px;
+}
+.reverse-form__input {
+    box-sizing: border-box;
+    width: 235px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 24px;
+}
+.reverse-form__input:nth-child(3) {
+    display: block;
+    width: 500px;
+    grid-column: 1/3;
+    width: 510px;
+    min-height: 100px;                                            
+}
+.reverse-form__send {
+    margin-top: 32px;
+    width: 235px;
+    height: 50px;
+    border: none;
+    background-color: #FB8C00;
+    border-radius: 37px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+}
+.questions_politic {
+    padding-right: 57px;
+    margin-top: 38px;
+    height: 34px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: #959CAC;
+        &-link {
+            color: #2F80ED;
+        }
+}

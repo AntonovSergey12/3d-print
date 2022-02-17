@@ -1,0 +1,37 @@
+.top-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 109px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+        &__container {
+            margin-left: 200px;
+        }
+}
+.top-section::before {
+    position: absolute;
+    content: "";
+    width: 1600px;
+    height: 940px;
+    top: 0;
+    background-image: url(../../img/main/background-color-header.jpg);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    z-index: -3;
+}
+
+@media (min-width: 375px) and (max-width:765px) {
+    .top-section {
+        padding-top: 40px;
+        max-width: 375px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+            &__container {
+                margin-left: 0px;
+                padding-top: 73px;
+            }
+    }
+    
+}
