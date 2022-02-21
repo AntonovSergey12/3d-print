@@ -1,0 +1,17 @@
+.section-slider {
+    max-width: 100%;
+        &__wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+}
+.section-slider__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+    color: $color-text;
+}
+.section-slider__wrapper-photo{
+    @include list-reset;
+    display: flex;
+}

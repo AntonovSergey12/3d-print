@@ -20,7 +20,15 @@
     background-position: center;
     z-index: -3;
 }
-
+.top-section::after {
+    position: absolute;
+    content: "";
+    width: 203px;
+    height: 203px;
+    background-image: url(../../img/circle-color.svg);
+    background-repeat: no-repeat;
+    top: 498px;
+}
 @media (min-width: 375px) and (max-width:765px) {
     .top-section {
         padding-top: 40px;

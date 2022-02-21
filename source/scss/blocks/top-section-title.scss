@@ -4,11 +4,21 @@
     line-height: 88px;
     color: $color-text;
     width: 370px;
+    position: relative;
         &-color {
             color: #FB8C00;
         }
 }
+.top-section-title::before {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 54px;
+    background-image: url(../../img/circle-color-first.svg);
+    top: -50px;
+    right: -197px;
 
+}
 @media (min-width: 375px) and (max-width:765px) {
     .top-section-title {
         max-width: 319px;

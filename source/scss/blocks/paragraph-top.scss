@@ -1,6 +1,7 @@
 .paragraph-top {
     display: flex;
     justify-content: left;
+    position: relative;
         &__text {
             margin-left: 63px;
             position: relative;
@@ -16,6 +17,16 @@
         &__text:nth-child(3) {
             max-width: 186px;
         }
+}
+.paragraph-top::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-image: url(../../img/circle-color-first.svg);
+    background-repeat: no-repeat;
+    top: 430px;
+    right: -320px;
 }
 .paragraph-top__text::before {
     position: absolute;

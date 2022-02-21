@@ -3,4 +3,28 @@
     font-size: 48px;
     line-height: 59px;
     color: $color-text;
+    position: relative;
+}
+.details-title::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url(../../img/circle-color-first.svg);
+    background-repeat: no-repeat;
+    transform: rotate(-55deg);
+    top: 600px;
+    left: -220px;
+}
+.details-title::after {
+    position: absolute;
+    content: "";
+    width: 127px;
+    height: 127px;
+    background-image: url(../../img/circle-color-first.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-55deg);
+    top: 980px;
+    right: -240px;
 }

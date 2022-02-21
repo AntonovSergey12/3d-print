@@ -1,6 +1,26 @@
 .cost{ 
     width: 100%;
+    padding-top: 200px;
     margin: 0 auto;
-    background-image: radial-gradient(100.93% 242.98% at 1.19% 19.9%, #EBF6FF 0%, #EBEAF8 33.33%, #D8EDEE 61.98%, #EFF4F9 82.29%, #EFF8FF 100%), url(../../img/main/background-cost.png);
+    background-image:url(../../img/main/background-cost.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-bottom: 180px;
+    position: relative;
+}
+.cost::before {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 140px;
+    background-image: url(../../img/circle-color-first.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+    right: 200px;
+}
+.cost-print {
+    padding-top: 0;
+    background:none;
 }
