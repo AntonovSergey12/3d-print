@@ -87,6 +87,7 @@ function serve() {
     })
     watch('source/scss/**/*scss', series(css, cssNomin, refresh))
     watch('source/*.html', series(html,refresh))
+    watch('source/*', series (js,refresh))
 }
 function refresh(done) {
     server.reload()

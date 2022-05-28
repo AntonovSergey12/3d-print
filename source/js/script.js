@@ -7,4 +7,4 @@ const swiper = new Swiper(".section-slider__wrapper", {
         slidesPerView: 'auto',
       },
    
-}) 
+})

@@ -73,7 +73,9 @@
     left: 0;
 }
 .materials__list-descripton {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 .materials__list-active {
     padding-top: 115px;
@@ -86,4 +88,8 @@
     width: 11px;
     height: 11px;
     font-size: 22px;
+}
+.materials__list-button:active,
+.materials__list-button:hover {
+    background-color: #fff;
 }
