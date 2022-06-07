@@ -69,9 +69,6 @@ function js() {
     return pipeline (
         src('./source/js/*.js'),
         sourcemaps.init(),
-        uglify(),
-        sourcemaps.write('.'),
-        rename({suffix: '.min'}),
         dest('build/js')
     
     )
@@ -87,7 +84,7 @@ function serve() {
     })
     watch('source/scss/**/*scss', series(css, cssNomin, refresh))
     watch('source/*.html', series(html,refresh))
-    watch('source/*', series (js,refresh))
+    watch('source/js/*.js', series(js,refresh))
 }
 function refresh(done) {
     server.reload()

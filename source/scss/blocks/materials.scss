@@ -85,11 +85,15 @@
         }
 }
 .materials__list-button {
+    position:absolute;
     width: 11px;
     height: 11px;
+    right: 21px;
     font-size: 22px;
+    background: none;
+    border: none;
 }
-.materials__list-button:active,
-.materials__list-button:hover {
-    background-color: #fff;
+.materials__list-link {
+    display: inline-block;
+    position: relative;
 }
